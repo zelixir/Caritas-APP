@@ -181,6 +181,12 @@ class _ArticleViewState extends State<ArticleView> {
     return Scaffold(
         appBar: AppBar(
           title: Text(article.title),
+          leading: IconButton(
+            icon: const Icon(Icons.home),
+            onPressed: () {
+              Navigator.popUntil(context, (route) => route.isFirst);
+            },
+          ),
           actions: [
             isPlaying
                 ? IconButton(
