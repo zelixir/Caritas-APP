@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../Pages/Article/ArticleView.dart';
@@ -85,7 +86,7 @@ class _ArticleListItemViewState extends State<ArticleListItemView> {
               })
           : null,
       onTap: () async {
-        await Navigator.of(context).push(MaterialPageRoute(
+        await Navigator.of(context).push(CupertinoPageRoute(
             builder: (BuildContext context) => ArticleView(
                   widget.article,
                   getPre: widget.getPre,
