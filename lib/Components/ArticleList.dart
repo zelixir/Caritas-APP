@@ -81,13 +81,14 @@ class ArticleList extends StatelessWidget {
         );
       }
 
-      return ListView.builder(
+      return Scrollbar(
+          child: ListView.builder(
         itemCount: items.length,
         prototypeItem: items.isEmpty ? null : itemBuilder(0),
         itemBuilder: (context, index) {
           return itemBuilder(index);
         },
-      );
+      ));
     } else {
       return Column(
           children:
